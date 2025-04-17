@@ -1,0 +1,19 @@
+.switcher {
+  background-color: var(--background-primary-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-primary-color);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+  &:hover {
+    border: 1px solid var(--border-primary-color-hover);
+  }
+}

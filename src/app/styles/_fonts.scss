@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+$font-primary: 'Manrope', sans-serif;
+$font-accent: 'Bebas Neue', sans-serif;
+
+@mixin textPrimary($size: 16px, $weight: 400, $line-height: 120%) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin textAccent($size: 16px, $weight: 400, $line-height: 120%) {
+  font-family: $font-accent;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}

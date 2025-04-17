@@ -1,0 +1,15 @@
+@use 'app/styles/fonts' as *;
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  .item {
+    @include textPrimary(16px, 500, 24px);
+    color: var(--text-secondary-color);
+    transition: 0.3s;
+    &:hover {
+      color: var(--text-secondary-color-hover);
+    }
+  }
+}

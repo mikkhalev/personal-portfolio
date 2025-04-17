@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  .actions {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}

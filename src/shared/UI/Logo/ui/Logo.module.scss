@@ -1,0 +1,10 @@
+@use 'app/styles/fonts' as *;
+
+.logo {
+  display: flex;
+  >span {
+    @include textAccent(32px, 400, 150%);
+    color: var(--text-secondary-color);
+    text-transform: uppercase;
+  }
+}
