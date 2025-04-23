@@ -1,5 +1,6 @@
 :root {
   --background-primary-color: #0A0A0A;
+  --background-secondary-color: #1A1A1A;
 
   --border-primary-color: #484848;
   --border-primary-color-hover: #ffffff;
@@ -9,5 +10,12 @@
 }
 
 [data-theme="light"] {
+  --background-primary-color: #ffffff;
+  --background-secondary-color: #8D8D8D;
 
+  --border-primary-color: #848484;
+  --border-primary-color-hover: #000000;
+
+  --text-secondary-color: #3a3a3a;
+  --text-secondary-color-hover: #000000;
 }

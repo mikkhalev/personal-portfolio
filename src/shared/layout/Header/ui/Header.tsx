@@ -4,6 +4,7 @@ import clsx from "clsx";
 import Logo from "shared/UI/Logo";
 import Navigation from "shared/UI/Navigation";
 import ThemeSwitcher from "features/ThemeSwitcher";
+import LangSwitcher from "features/LangSwtcher";
 
 interface HeaderProps {
 
@@ -16,6 +17,7 @@ const Header:FC<HeaderProps> = () => {
                 <Logo/>
                 <Navigation/>
                 <div className={clsx(cls.actions)}>
+                    <LangSwitcher/>
                     <ThemeSwitcher/>
                 </div>
             </div>

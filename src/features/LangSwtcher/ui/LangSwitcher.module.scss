@@ -1,0 +1,67 @@
+@use 'app/styles/fonts' as *;
+
+.switcher {
+    position: relative;
+    .current {
+        border-radius: 8px;
+        border: 1px solid var(--border-primary-color);
+        padding: 0 7px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        flex-direction: row;
+        gap: 4px;
+
+        color: var(--text-secondary-color);
+
+        span {
+            @include textPrimary(14px, 600, 120%);
+            transition: 0.3s;
+        }
+        &:hover {
+            border: 1px solid var(--border-primary-color-hover);
+            span {
+                color: var(--text-secondary-color-hover);
+            }
+        }
+    }
+    .dropdown {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+        .dropdownItems {
+            background-color: var(--background-secondary-color);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px 20px;
+            margin-top: 10px;
+            .dropdownItem {
+                cursor: pointer;
+                width: 100%;
+
+                @include textPrimary(14px, 400, 120%);
+
+                color: var(--text-secondary-color);
+                transition: 0.3s;
+                &:hover {
+                    color: var(--text-secondary-color-hover);
+                }
+            }
+        }
+    }
+    &:hover {
+        .dropdown {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}

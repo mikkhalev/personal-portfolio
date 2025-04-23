@@ -38,7 +38,12 @@ module.exports = {
                             esModule: false,
                         },
                     },
-                    'sass-loader'
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        }
+                    }
                 ],
             },
             {
