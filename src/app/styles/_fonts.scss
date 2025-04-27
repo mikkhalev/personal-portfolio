@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@font-face {
+  font-family: 'Bebas Neue Cyrillic';
+  src: url('app/assets/fonts/BebasNeueCyrillic/bebasneuecyrillic.ttf') format('truetype'); /* Путь к шрифту */
+  font-weight: normal;
+  font-style: normal;
+}
 
 $font-primary: 'Manrope', sans-serif;
-$font-accent: 'Bebas Neue', sans-serif;
+$font-accent: 'Bebas Neue Cyrillic', 'Oswald', sans-serif;
 
 @mixin textPrimary($size: 16px, $weight: 400, $line-height: 120%) {
   font-family: $font-primary;

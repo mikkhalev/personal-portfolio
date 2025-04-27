@@ -1,16 +1,20 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import clsx from "clsx";
 import cls from "./LangSwitcher.module.scss"
 import Chevron from './icons/chevron.svg'
 import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {getLang} from "../model/selectors/getLang";
+import {langActions} from "features/LangSwtcher/model/slice/langSlice";
 
 
 const LangSwitcher: FC = () => {
 
-    const {i18n} = useTranslation();
+    const dispatch = useDispatch();
+    const currentLang = useSelector(getLang)
 
     const changeLanguageTo = (lang: string) => {
-        i18n.changeLanguage(lang).then()
+        dispatch(langActions.changeLanguage(lang))
     }
 
     return (
@@ -18,7 +22,7 @@ const LangSwitcher: FC = () => {
             <div className={cls.current}>
                 <span>
                     {
-                        i18n.language.toUpperCase()
+                        currentLang
                     }
                 </span>
                 <Chevron/>

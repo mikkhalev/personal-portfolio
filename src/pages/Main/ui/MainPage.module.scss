@@ -1,0 +1,36 @@
+@use 'app/styles/fonts' as *;
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 108px;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.title {
+  @include textAccent(101px, 500, 90%);
+  color: var(--text-primary-color);
+  text-transform: uppercase;
+}
+
+.pageTitle {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  span {
+    @include textPrimary(18px, 500, 150%);
+    color: var(--text-secondary-color);
+    max-width: 700px;
+    margin-top: 12px;
+  }
+}

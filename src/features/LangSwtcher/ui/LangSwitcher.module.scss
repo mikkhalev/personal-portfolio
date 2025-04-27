@@ -21,6 +21,7 @@
         span {
             @include textPrimary(14px, 600, 120%);
             transition: 0.3s;
+            text-transform: uppercase;
         }
         &:hover {
             border: 1px solid var(--border-primary-color-hover);

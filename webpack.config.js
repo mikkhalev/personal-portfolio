@@ -49,7 +49,19 @@ module.exports = {
             {
                 test: /\.svg$/,
                 use: ['@svgr/webpack'],
-            }
+            },
+            {
+                test: /\.(ttf|eot|woff|woff2)$/, // Поддерживаемые шрифты
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[hash:8].[ext]', // Уникальное имя для файла
+                            outputPath: 'assets/fonts/', // Папка, куда будут сохраняться шрифты
+                        },
+                    },
+                ],
+            },
         ]
     },
     plugins: [
