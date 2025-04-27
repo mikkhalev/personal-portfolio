@@ -23,14 +23,28 @@
   color: var(--text-primary-color);
   text-transform: uppercase;
 }
-
+.text {
+  @include textPrimary(18px, 500, 150%);
+  color: var(--text-secondary-color);
+  max-width: 700px;
+  margin-top: 12px;
+}
 .pageTitle {
   padding-top: 80px;
   padding-bottom: 80px;
-  span {
-    @include textPrimary(18px, 500, 150%);
-    color: var(--text-secondary-color);
-    max-width: 700px;
-    margin-top: 12px;
+  .photo {
+    max-width: 228px;
+    height: 274px;
+    border-radius: 16px;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .buttonsRow {
+    gap: 16px;
+    margin-top: 40px;
   }
 }
